@@ -2,13 +2,13 @@ import ManageSearchOutlinedIcon from "@mui/icons-material/ManageSearchOutlined";
 import {
   Button,
   Card,
-  CardActions,
   CardContent,
   CardHeader,
   Chip,
   Grid,
   List,
   ListItem,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import { useState } from "react";
@@ -21,15 +21,29 @@ const Rules = () => {
   };
   return (
     <>
-      <Card>
-        <CardHeader sx={{ textAlign: "center" }} title="Règles" />
+      <Card sx={{ maxHeight: "500px" }}>
+        <CardHeader
+          title="Règles"
+          action={
+            <Button
+              variant="outlined"
+              size="small"
+              endIcon={<ManageSearchOutlinedIcon />}
+              onClick={() => {
+                setOpenModal(true);
+              }}
+            >
+              Règles Etendues
+            </Button>
+          }
+        />
         <CardContent>
           <Typography variant="h6">Bienvenue au jeu du Black Jack.</Typography>
-          <Typography variant="body1">
+          <Typography variant="body2">
             Vous jouer contre le croupier, votre objectif est de vous rapprocher
             de la somme 21 avec votre main de carte.
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body2">
             La valeur des cartes est définis comme suit :
           </Typography>
           <List dense disablePadding>
@@ -50,26 +64,44 @@ const Rules = () => {
             </ListItem>
           </List>
 
-          <Typography variant="body1">
+          <Typography variant="body2">
             Une fois les cartes distribuées, misez une somme depuis votre
             banque.
           </Typography>
 
-          <Typography variant="body1" pt="10px">
+          <Typography variant="body2" pt="10px">
             Vous avez ensuite 3 possibilité :
           </Typography>
           <Grid container gap={3} pb="15px">
             <Grid item>
-              <Chip color="stand" label="Stand" />
+              <Tooltip
+                placement="bottom-end"
+                title="Vous ne faites rien et garder votre main tel quel"
+                arrow
+              >
+                <Chip color="stand" label="Stand" />
+              </Tooltip>
             </Grid>
             <Grid item>
-              <Chip color="hit" label="Hit" />
+              <Tooltip
+                placement="bottom-end"
+                title="Vous redemandez une carte pour augementer votre main. Cette action est répétable autant de fois que vous le voulez"
+                arrow
+              >
+                <Chip color="hit" label="Hit" />
+              </Tooltip>
             </Grid>
             <Grid item>
-              <Chip color="doubledown" label="Double Down" />
+              <Tooltip
+                placement="bottom-end"
+                title="Vous doublez votre mise mais ne piochez qu'une seule carte en plus dans votre main"
+                arrow
+              >
+                <Chip color="doubledown" label="Double Down" />
+              </Tooltip>
             </Grid>
           </Grid>
-          <Typography variant="body1">
+          <Typography variant="body2">
             Une fois le tour du croupier finis, il révèle ses cartes.
           </Typography>
           <List dense>
@@ -92,24 +124,12 @@ const Rules = () => {
             </ListItem>
             <ListItem>
               <Typography variant="body2">
-                - En cas d&aposégalité, personne ne remporte la partie et vous
+                - En cas d&apos;égalité, personne ne remporte la partie et vous
                 récupérez votre mise.
               </Typography>
             </ListItem>
           </List>
         </CardContent>
-        <CardActions>
-          <Button
-            variant="outlined"
-            size="small"
-            endIcon={<ManageSearchOutlinedIcon />}
-            onClick={() => {
-              setOpenModal(true);
-            }}
-          >
-            Règles Etendues
-          </Button>
-        </CardActions>
       </Card>
       <RulesModal openModal={openModal} onCloseModal={handleCloseModal} />
     </>

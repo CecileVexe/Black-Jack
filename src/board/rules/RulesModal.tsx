@@ -61,8 +61,8 @@ const RulesModal = (props: RulesModalProps) => {
           carte et une seconde carte face cachée pour lui.
         </ModalTypography>
         <ModalTypography variant="body1">
-          Une fois les cartes distribuées, c&aposest à vous de jouer, misez une
-          somme depuis votre banque. Vous avez ensuite 3 possibilité :
+          Une fois les cartes distribuées, c&apos;sest à vous de jouer, misez
+          une somme depuis votre banque. Vous avez ensuite 3 possibilité :
         </ModalTypography>
         <List>
           <ListItem>
@@ -73,21 +73,21 @@ const RulesModal = (props: RulesModalProps) => {
           </ListItem>
           <ListItem>
             <ModalTypography variant="body1">
-              <Chip color="stand" label="Stand" /> : Vous redemandez une carte
-              pour augementer votre main. Cette action est répétable autant de
-              fois que vous le voulez
+              <Chip color="hit" label="Hit" /> : Vous redemandez une carte pour
+              augementer votre main. Cette action est répétable autant de fois
+              que vous le voulez
             </ModalTypography>
           </ListItem>
           <ListItem>
             <ModalTypography variant="body1">
               <Chip color="doubledown" label="Double Down" /> : Vous doublez
-              votre mise mais ne piochez qu&aposune seule carte en plus dans
+              votre mise mais ne piochez qu&apos;une seule carte en plus dans
               votre main.
             </ModalTypography>
           </ListItem>
         </List>
         <ModalTypography variant="body1">
-          Une fois que vous avez finis de jouer, c&aposest au tour du croupier.
+          Une fois que vous avez finis de jouer, c&apos;est au tour du croupier.
           Ce dernier tentera de se rapporcher de 21 sans dépasser 17.
         </ModalTypography>
         <ModalTypography variant="body1">
@@ -113,7 +113,7 @@ const RulesModal = (props: RulesModalProps) => {
           </ListItem>
           <ListItem>
             <ModalTypography variant="body1">
-              - En cas d&aposégalité, personne ne remporte la partie et vous
+              - En cas d&apos;égalité, personne ne remporte la partie et vous
               récuprez votre mise.
             </ModalTypography>
           </ListItem>
