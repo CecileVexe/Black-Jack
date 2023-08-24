@@ -10,7 +10,7 @@ const Board = () => {
         </Grid>
         <Grid item>Croupier</Grid>
         <Grid item xs={3}>
-          Paquet Carte
+          <img src="/images/cards/2_of_clubs.svg" alt="Paquet de carte" />
         </Grid>
       </Grid>
       <Grid container direction="row" justifyContent="space-around">
