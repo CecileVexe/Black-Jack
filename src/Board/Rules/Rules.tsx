@@ -1,3 +1,4 @@
+import ManageSearchOutlinedIcon from "@mui/icons-material/ManageSearchOutlined";
 import {
   Button,
   Card,
@@ -10,9 +11,8 @@ import {
   ListItem,
   Typography,
 } from "@mui/material";
-import ManageSearchOutlinedIcon from "@mui/icons-material/ManageSearchOutlined";
-import RulesModal from "./RulesModal";
 import { useState } from "react";
+import RulesModal from "./RulesModal";
 
 const Rules = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -32,7 +32,7 @@ const Rules = () => {
           <Typography variant="body1">
             La valeur des cartes est définis comme suit :
           </Typography>
-          <List dense={true} disablePadding={true}>
+          <List dense disablePadding>
             <ListItem>
               <Typography variant="body2">
                 - de 2 à 9 : valeur nominale de la carte
@@ -72,7 +72,7 @@ const Rules = () => {
           <Typography variant="body1">
             Une fois le tour du croupier finis, il révèle ses cartes.
           </Typography>
-          <List dense={true}>
+          <List dense>
             <ListItem>
               <Typography variant="body2">
                 - Si vous avez fait 21, vous gagnez et triplez votre mise
@@ -92,7 +92,7 @@ const Rules = () => {
             </ListItem>
             <ListItem>
               <Typography variant="body2">
-                - En cas d'égalité, personne ne remporte la partie et vous
+                - En cas d&aposégalité, personne ne remporte la partie et vous
                 récupérez votre mise.
               </Typography>
             </ListItem>

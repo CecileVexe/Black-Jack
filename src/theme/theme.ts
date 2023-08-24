@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material";
 
 const { palette } = createTheme();
 
-export const theme = createTheme({
+const theme = createTheme({
   palette: {
     hit: palette.augmentColor({ color: { main: "#5d870e" } }),
     stand: palette.augmentColor({ color: { main: "#c77100" } }),
@@ -31,3 +31,5 @@ export const theme = createTheme({
     },
   },
 });
+
+export default theme;

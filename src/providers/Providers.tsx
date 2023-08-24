@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@mui/material";
-import { theme } from "../theme/theme";
+import theme from "../theme/theme";
+
 interface ProvidersProps {
   children: JSX.Element;
 }

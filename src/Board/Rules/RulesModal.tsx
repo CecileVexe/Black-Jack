@@ -61,7 +61,7 @@ const RulesModal = (props: RulesModalProps) => {
           carte et une seconde carte face cachée pour lui.
         </ModalTypography>
         <ModalTypography variant="body1">
-          Une fois les cartes distribuées, c'est à vous de jouer, misez une
+          Une fois les cartes distribuées, c&aposest à vous de jouer, misez une
           somme depuis votre banque. Vous avez ensuite 3 possibilité :
         </ModalTypography>
         <List>
@@ -81,14 +81,14 @@ const RulesModal = (props: RulesModalProps) => {
           <ListItem>
             <ModalTypography variant="body1">
               <Chip color="doubledown" label="Double Down" /> : Vous doublez
-              votre mise mais ne piochez qu'une seule carte en plus dans votre
-              main.
+              votre mise mais ne piochez qu&aposune seule carte en plus dans
+              votre main.
             </ModalTypography>
           </ListItem>
         </List>
         <ModalTypography variant="body1">
-          Une fois que vous avez finis de jouer, c'est au tour du croupier. Ce
-          dernier tentera de se rapporcher de 21 sans dépasser 17.
+          Une fois que vous avez finis de jouer, c&aposest au tour du croupier.
+          Ce dernier tentera de se rapporcher de 21 sans dépasser 17.
         </ModalTypography>
         <ModalTypography variant="body1">
           Une fois son tour finis, il révèle ses cartes.
@@ -113,7 +113,7 @@ const RulesModal = (props: RulesModalProps) => {
           </ListItem>
           <ListItem>
             <ModalTypography variant="body1">
-              - En cas d'égalité, personne ne remporte la partie et vous
+              - En cas d&aposégalité, personne ne remporte la partie et vous
               récuprez votre mise.
             </ModalTypography>
           </ListItem>
