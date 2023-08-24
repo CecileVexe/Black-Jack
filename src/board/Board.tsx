@@ -1,27 +1,38 @@
 import { Box, Grid } from "@mui/material";
 import Croupier from "../croupier/Croupier";
+import Choices from "./choices/Choices";
 import Joueur from "./joueur/Joueur";
 import Rules from "./rules/Rules";
+import Score from "./score/Score";
 
 const Board = () => {
   return (
-    <Box py="20px">
+    <Box py="10px" px="20px">
       <Grid
         container
         direction="row"
-        justifyContent="space-around"
-        gap={6}
+        justifyContent="space-between"
         wrap="nowrap"
+        pb="50px"
       >
-        <Grid item xs={4}>
+        <Grid item>
           <Rules />
         </Grid>
-        <Grid item>
+        <Grid
+          item
+          sx={{ border: "5px double #eeeeee70", borderRadius: "10px" }}
+        >
           <Croupier />
         </Grid>
-        <Grid item sx={{ textAlign: "center" }} xs={3}>
+        <Grid
+          item
+          sx={{
+            textAlign: "center",
+          }}
+          xs={3}
+        >
           <img
-            className="cards"
+            className="cards deck"
             src="/images/cards/2_of_clubs.svg"
             alt="Paquet de carte"
           />
@@ -30,20 +41,29 @@ const Board = () => {
       <Grid
         container
         direction="row"
-        justifyContent="space-around"
-        gap={6}
+        justifyContent="space-between"
         wrap="nowrap"
       >
         <Grid item>
-          <Grid item>Score et Banque</Grid>
+          <Score />
         </Grid>
-        <Grid item>
-          <Grid item>
-            <Joueur />
-          </Grid>
+        <Grid
+          item
+          sx={{
+            border: "5px double #eeeeee70",
+            borderRadius: "10px",
+            display: "flex",
+          }}
+          p="0px"
+        >
+          <Joueur />
         </Grid>
-        <Grid item>
-          <Grid item>Choix et mise</Grid>
+        <Grid
+          item
+          p="8px"
+          sx={{ border: "5px double #eeeeee70", borderRadius: "10px" }}
+        >
+          <Choices />
         </Grid>
       </Grid>
     </Box>

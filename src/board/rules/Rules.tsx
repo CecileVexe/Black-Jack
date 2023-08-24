@@ -69,33 +69,38 @@ const Rules = () => {
             banque.
           </Typography>
 
-          <Typography variant="body2" pt="10px">
-            Vous avez ensuite 3 possibilité :
-          </Typography>
-          <Grid container gap={3} pb="15px">
+          <Grid container gap={3} py="10px" alignItems="center">
+            <Grid item>
+              <Typography display="inline" variant="body2" pt="10px">
+                Vous avez ensuite 3 possibilités :
+              </Typography>
+            </Grid>
             <Grid item>
               <Tooltip
-                placement="bottom-end"
+                placement="top-end"
                 title="Vous ne faites rien et garder votre main tel quel"
                 arrow
+                sx={{ "&:hover": { cursor: "pointer" } }}
               >
                 <Chip color="stand" label="Stand" />
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip
-                placement="bottom-end"
+                placement="top-end"
                 title="Vous redemandez une carte pour augementer votre main. Cette action est répétable autant de fois que vous le voulez"
                 arrow
+                sx={{ "&:hover": { cursor: "pointer" } }}
               >
                 <Chip color="hit" label="Hit" />
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip
-                placement="bottom-end"
+                placement="top-end"
                 title="Vous doublez votre mise mais ne piochez qu'une seule carte en plus dans votre main"
                 arrow
+                sx={{ "&:hover": { cursor: "pointer" } }}
               >
                 <Chip color="doubledown" label="Double Down" />
               </Tooltip>

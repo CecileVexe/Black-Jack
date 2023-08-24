@@ -2,7 +2,12 @@ import { Grid, Typography } from "@mui/material";
 
 const Joueur = () => {
   return (
-    <Grid container direction="column" alignItems="center">
+    <Grid
+      container
+      direction="column"
+      alignItems="center"
+      justifyContent="space-around"
+    >
       <Grid item>
         <Typography variant="h4">Joueur</Typography>
       </Grid>
@@ -23,6 +28,9 @@ const Joueur = () => {
             />
           </Grid>
         </Grid>
+      </Grid>
+      <Grid item>
+        <Typography variant="h6"> Valeur de la main : X </Typography>
       </Grid>
     </Grid>
   );

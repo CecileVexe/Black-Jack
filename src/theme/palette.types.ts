@@ -20,3 +20,19 @@ declare module "@mui/material/Chip" {
     doubledown: true;
   }
 }
+
+declare module "@mui/material/Button" {
+  interface ButtonPropsColorOverrides {
+    hit: true;
+    stand: true;
+    doubledown: true;
+  }
+}
+
+declare module "@mui/material/Alert" {
+  interface AlertPropsColorOverrides {
+    hit: true;
+    stand: true;
+    doubledown: true;
+  }
+}
