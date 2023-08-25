@@ -1,20 +1,21 @@
 import { ActionsKey } from "./types/actions.types";
+import PlayerChoice from "./types/playerChoices.types";
 
 const actions: Array<ActionsKey> = [
   {
     title: "Stand",
     message: "Passez votre tour",
-    color: "stand",
+    color: PlayerChoice.STAND,
   },
   {
     title: "Hit",
     message: "Piochez une carte",
-    color: "hit",
+    color: PlayerChoice.HIT,
   },
   {
     title: "Double down",
     message: "Doublez la mise et piochez une dernière carte",
-    color: "doubledown",
+    color: PlayerChoice.DOUBLEDOWN,
   },
 ];
 
