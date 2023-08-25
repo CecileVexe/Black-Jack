@@ -1,5 +1,5 @@
 import "./App.css";
-import Board from "./Board/Board";
+import Board from "./board/Board";
 import Providers from "./providers/Providers";
 
 const App = () => {

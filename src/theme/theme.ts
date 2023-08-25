@@ -29,6 +29,15 @@ const theme = createTheme({
         },
       },
     },
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          color: "#111",
+          backgroundColor: "#eee",
+        },
+        arrow: { color: "#eee" },
+      },
+    },
   },
 });
 
