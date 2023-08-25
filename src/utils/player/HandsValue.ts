@@ -1,6 +1,6 @@
 import { Cards } from "../types/cardsDeck.types";
 
-const getHandValue = (hand: Cards[]) => {
+export const getHandValue = (hand: Cards[]) => {
   const handValue = hand.reduce((total, card) => {
     return total + card.value;
   }, 0);
@@ -8,4 +8,9 @@ const getHandValue = (hand: Cards[]) => {
   return handValue;
 };
 
-export default getHandValue;
+export const getRandomCard = (cards: Cards[]) => {
+  const pick = Math.floor(Math.random() * cards.length);
+  const card = cards[pick];
+  cards.splice(pick, 1);
+  return card;
+};
