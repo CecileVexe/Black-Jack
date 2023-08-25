@@ -8,3 +8,7 @@
   padding: 20px;
   background-color: #11111150;
 }
+
+.MuiFormControlLabel-label {
+  color: #111 !important;
+}
