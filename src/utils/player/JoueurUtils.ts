@@ -8,7 +8,7 @@ export const getHandValue = (hand: Cards[]) => {
   return handValue;
 };
 
-export const getRandomCard = (cards: Cards[]) => {
+export const drawRandomCard = (cards: Cards[]) => {
   const pick = Math.floor(Math.random() * cards.length);
   const card = cards[pick];
   cards.splice(pick, 1);

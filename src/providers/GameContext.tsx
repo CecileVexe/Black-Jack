@@ -11,7 +11,7 @@ const GameContext = React.createContext<GameContextType>({
   bank: 100,
   setBank: (_: number) => {},
   playerChoice: undefined,
-  setPlayerChoice: (_: PlayerChoice) => {},
+  setPlayerChoice: (_: PlayerChoice | undefined) => {},
   playerCards: [],
   setPlayerCards: (_: Cards[]) => {},
   playerScore: 0,

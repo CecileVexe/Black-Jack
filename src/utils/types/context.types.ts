@@ -6,7 +6,7 @@ export type GameContextType = {
   bank: number;
   setBank: (_: number) => void;
   playerChoice: PlayerChoice | undefined;
-  setPlayerChoice: (_: PlayerChoice) => void;
+  setPlayerChoice: (_: PlayerChoice | undefined) => void;
   playerCards: Cards[];
   setPlayerCards: (_: Cards[]) => void;
   playerScore: number;
