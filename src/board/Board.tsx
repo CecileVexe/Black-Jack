@@ -15,7 +15,7 @@ const Board = () => {
         wrap="nowrap"
         pb="50px"
       >
-        <Grid item>
+        <Grid item xs={4}>
           <Rules />
         </Grid>
         <Grid
@@ -49,6 +49,7 @@ const Board = () => {
         </Grid>
         <Grid
           item
+          xs={5}
           sx={{
             border: "5px double #eeeeee70",
             borderRadius: "10px",
@@ -59,6 +60,7 @@ const Board = () => {
           <Joueur />
         </Grid>
         <Grid
+          xs={4}
           item
           p="8px"
           sx={{ border: "5px double #eeeeee70", borderRadius: "10px" }}
