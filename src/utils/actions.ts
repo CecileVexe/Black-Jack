@@ -4,7 +4,7 @@ import PlayerChoice from "./types/playerChoices.types";
 const actions: Array<ActionsKey> = [
   {
     title: "Stand",
-    message: "Passez votre tour",
+    message: "Terminez votre tour",
     color: PlayerChoice.STAND,
   },
   {

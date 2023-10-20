@@ -33,20 +33,21 @@ const Joueur = () => {
     }
   };
 
-  const hitANewCard = () => {
-    const drawNewCard = drawRandomCard(currentDeck);
-    const newCards = [...playerCards, drawNewCard];
-    setPickedCards(newCards);
-  };
+  const endOfPlayerTurn = () => console.log("fin de partie");
 
-  const doubledown = () => {
+  const hitANewCard = async () => {
     const drawNewCard = drawRandomCard(currentDeck);
     const newCards = [...playerCards, drawNewCard];
     setPickedCards(newCards);
   };
 
   const stand = () => {
-    console.log("fin de partie");
+    endOfPlayerTurn();
+  };
+
+  const doubledown = async () => {
+    await hitANewCard();
+    stand();
   };
 
   useEffect(() => {
