@@ -36,3 +36,11 @@ declare module "@mui/material/Alert" {
     doubledown: true;
   }
 }
+
+declare module "@mui/material/Radio" {
+  interface RadioPropsColorOverrides {
+    hit: true;
+    stand: true;
+    doubledown: true;
+  }
+}

@@ -1,6 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { useContext } from "react";
+import GameContext from "../../providers/GameContext";
 
 const Bank = () => {
+  const { bank } = useContext(GameContext);
   return (
     <Grid container direction="column" alignItems="flex-start">
       <Grid item>
@@ -21,7 +24,7 @@ const Bank = () => {
                 alignItems: "center",
               }}
             >
-              <Typography variant="h4">500</Typography>
+              <Typography variant="h4">{bank}</Typography>
             </Box>
           </Grid>
           <Grid item>
