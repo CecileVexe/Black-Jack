@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Croupier from "../croupier/Croupier";
 import Choices from "./choices/Choices";
 import Joueur from "./joueur/Joueur";
@@ -7,19 +7,22 @@ import Score from "./score/Score";
 
 const Board = () => {
   return (
-    <Box py="10px" px="20px">
+    <Grid container direction="row" py="10px" px="20px" id="coucou">
       <Grid
+        item
         container
         direction="row"
         justifyContent="space-between"
         wrap="nowrap"
         pb="30px"
+        gap={1}
       >
         <Grid item xs={4}>
           <Rules />
         </Grid>
         <Grid
           item
+          xs={4}
           sx={{ border: "5px double #eeeeee70", borderRadius: "10px" }}
         >
           <Croupier />
@@ -39,17 +42,19 @@ const Board = () => {
         </Grid>
       </Grid>
       <Grid
+        item
         container
         direction="row"
         justifyContent="space-between"
         wrap="nowrap"
+        gap={1}
       >
         <Grid item>
           <Score />
         </Grid>
         <Grid
           item
-          xs={5}
+          xs={3}
           sx={{
             border: "5px double #eeeeee70",
             borderRadius: "10px",
@@ -69,7 +74,7 @@ const Board = () => {
           <Choices />
         </Grid>
       </Grid>
-    </Box>
+    </Grid>
   );
 };
 

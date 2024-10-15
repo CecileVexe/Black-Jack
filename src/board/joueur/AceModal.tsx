@@ -11,8 +11,8 @@ import {
   Radio,
   RadioGroup,
   Typography,
-  styled,
 } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import { getHandValue } from "../../utils/player/JoueurUtils";
 import { Cards } from "../../utils/types/cardsDeck.types";
@@ -84,7 +84,7 @@ const AceModal = (props: AceModalProps) => {
                 <FormControlLabel
                   value={10}
                   control={<Radio color="hit" />}
-                  label={10}
+                  label="10"
                 />
               </RadioGroup>
             </FormControl>
@@ -100,13 +100,13 @@ const AceModal = (props: AceModalProps) => {
             variant="contained"
             color="hit"
             onClick={() => {
-              const newCard = cards.map((card) => {
+              const newCards = cards.map((card) => {
                 if (card === aceCard) {
                   return { ...card, value: aceValue };
                 }
                 return card;
               });
-              setCards(newCard);
+              setCards(newCards);
               onCloseModal();
             }}
           >
