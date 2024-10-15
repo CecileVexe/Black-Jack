@@ -1,9 +1,15 @@
 import { Grid, Typography } from "@mui/material";
+
 import { useContext, useEffect, useState } from "react";
+
 import GameContext from "../../providers/GameContext";
+
 import { drawRandomCard, getHandValue } from "../../utils/player/JoueurUtils";
+
 import { Cards } from "../../utils/types/cardsDeck.types";
+
 import PlayerChoice from "../../utils/types/playerChoices.types";
+
 import AceModal from "./AceModal";
 
 const Joueur = () => {
@@ -90,25 +96,24 @@ const Joueur = () => {
 
   return (
     <>
-      <Grid
-        container
-        direction="column"
-        alignItems="center"
-        justifyContent="space-around"
-      >
+      <Grid container direction="column" alignItems="center">
         <Grid item>
-          <Typography variant="h4">Joueur</Typography>
+          <Typography variant="h5">Joueur</Typography>
         </Grid>
         <Grid item>
-          <Grid container alignItems="center">
+          <Typography variant="h6">
+            {`Valeur de la main : ${getHandValue(playerCards)}`}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Grid container alignItems="center" justifyContent="space-evenly">
             {playerCards.length >= 1 &&
               playerCards.map((playerCard) => (
                 <Grid
                   item
-                  sx={{ textAlign: "center" }}
+                  sx={{ textAlign: "center", mr: -7 }}
                   key={`player-card-${playerCard.card}`}
                 >
-                  <Typography variant="body1">{playerCard.card}</Typography>
                   <img
                     className="cards"
                     src={playerCard.img}
@@ -118,11 +123,6 @@ const Joueur = () => {
               ))}
             {/* {playerCards.length >= 1 && <GenerateCard />} */}
           </Grid>
-        </Grid>
-        <Grid item>
-          <Typography variant="h6">
-            {`Valeur de la main : ${getHandValue(playerCards)}`}
-          </Typography>
         </Grid>
       </Grid>
       {pickedCards && (

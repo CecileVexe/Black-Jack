@@ -4,7 +4,7 @@ import Action from "./Action";
 
 const ChoicesButtons = () => {
   return (
-    <Grid container direction="row" gap={5}>
+    <Grid container direction="row" gap={1}>
       {actions.map((action, index) => (
         <Grid item key={`action-${index}`}>
           <Action

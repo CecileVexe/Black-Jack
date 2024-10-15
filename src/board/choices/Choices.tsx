@@ -4,8 +4,8 @@ import ChoicesButtons from "./ChoicesButtons";
 
 const Choices = () => {
   return (
-    <Card sx={{ px: "20px" }}>
-      <Grid container direction="column" justifyContent="flex-start">
+    <Card sx={{ px: "20px", width: "100%" }}>
+      <Grid container direction="column" justifyContent="space-evenly">
         <Grid item>
           <Bet />
         </Grid>

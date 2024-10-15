@@ -13,7 +13,7 @@ const Board = () => {
         direction="row"
         justifyContent="space-between"
         wrap="nowrap"
-        pb="50px"
+        pb="30px"
       >
         <Grid item xs={4}>
           <Rules />
@@ -62,6 +62,7 @@ const Board = () => {
         <Grid
           xs={4}
           item
+          container
           p="8px"
           sx={{ border: "5px double #eeeeee70", borderRadius: "10px" }}
         >

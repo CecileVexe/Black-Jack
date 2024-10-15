@@ -1,5 +1,9 @@
 .cards {
-  width: 60%;
+  width: 6rem;
+}
+
+.coin {
+   width: 6rem;
 }
 
 .deck {

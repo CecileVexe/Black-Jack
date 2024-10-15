@@ -10,6 +10,7 @@ const Bet = () => {
         <img
           src="/images/coins/straight-poker-svgrepo-com.svg"
           alt="Vitre mise"
+          className="coin"
         />
       </Grid>
     </Grid>

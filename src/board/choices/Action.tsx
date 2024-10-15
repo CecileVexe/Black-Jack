@@ -1,4 +1,4 @@
-import { Alert, Button, Grid } from "@mui/material";
+import { Button, Grid, Tooltip } from "@mui/material";
 import { useContext } from "react";
 import GameContext from "../../providers/GameContext";
 import { MuiAlertColor, MuiVariant } from "../../utils/types/mui.types";
@@ -17,7 +17,7 @@ const Action = (props: ActionProps) => {
 
   return (
     <Grid container direction="column" alignItems="center" gap={1}>
-      <Grid item>
+      {/* <Grid item>
         <Alert
           icon={false}
           color={color}
@@ -26,15 +26,17 @@ const Action = (props: ActionProps) => {
         >
           {actionMessage}
         </Alert>
-      </Grid>
+      </Grid> */}
       <Grid item>
-        <Button
-          color={color}
-          variant={variant}
-          onClick={() => setPlayerChoice(color as PlayerChoice)}
-        >
-          {action}
-        </Button>
+        <Tooltip title={actionMessage} placement="bottom">
+          <Button
+            color={color}
+            variant={variant}
+            onClick={() => setPlayerChoice(color as PlayerChoice)}
+          >
+            {action}
+          </Button>
+        </Tooltip>
       </Grid>
     </Grid>
   );

@@ -9,6 +9,15 @@ const theme = createTheme({
     doubledown: palette.augmentColor({ color: { main: "#2642e0" } }),
   },
   typography: { allVariants: { color: "#eeeeee" } },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 425,
+      md: 768,
+      lg: 1024,
+      xl: 1920,
+    },
+  },
   components: {
     MuiCard: {
       styleOverrides: {

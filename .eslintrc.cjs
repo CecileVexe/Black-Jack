@@ -26,6 +26,8 @@ module.exports = {
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars" : "off",
     "import/extensions": "off",
   },
+  ignorePatterns: [".eslintrc.cjs", "vite.config.ts"],
 };
